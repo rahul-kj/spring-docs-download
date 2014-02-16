@@ -26,4 +26,5 @@ public interface DocumentConstants {
 	String SPRING_DATA_GEMFIRE = "spring.data.gemfire";
 	String SPRING_DATA_REDIS = "spring.data.redis";
 	String SPRING_DATA_JDBC_EXT = "spring.data.jdbc";
+	String SPRING_DATA_HADOOP = "spring.data.hadoop";
 }
