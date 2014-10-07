@@ -27,4 +27,9 @@ public interface DocumentConstants {
 	String SPRING_DATA_REDIS = "spring.data.redis";
 	String SPRING_DATA_JDBC_EXT = "spring.data.jdbc";
 	String SPRING_DATA_HADOOP = "spring.data.hadoop";
+	String SPRING_BOOT = "spring.boot";
+	String SPRING_SHELL = "spring.shell";
+	String SPRING_ROO = "spring.roo";
+	String SPRING_SECURITY_KERBEROS = "spring.security.kerberos";
+	String SPRING_CLOUD_CONFIG = "spring.cloud.config";
 }

@@ -30,6 +30,7 @@ public class SpringDocumentDownload {
 	static {
 		properties = loadAllProperties();
 		documentList = new ArrayList<String>();
+		documentList.add(DocumentConstants.SPRING_BOOT);
 		documentList.add(DocumentConstants.SPRING_FRAMEWORK);
 		documentList.add(DocumentConstants.SPRING_XD);
 		documentList.add(DocumentConstants.SPRING_INTEGRATION);
@@ -50,10 +51,14 @@ public class SpringDocumentDownload {
 		documentList.add(DocumentConstants.SPRING_DATA_GEMFIRE);
 		documentList.add(DocumentConstants.SPRING_DATA_REDIS);
 		documentList.add(DocumentConstants.SPRING_DATA_JDBC_EXT);
+		documentList.add(DocumentConstants.SPRING_ROO);
+		documentList.add(DocumentConstants.SPRING_SHELL);
+		documentList.add(DocumentConstants.SPRING_SECURITY_KERBEROS);
+		documentList.add(DocumentConstants.SPRING_CLOUD_CONFIG);
 	}
 
 	public static void main(String[] args) {
-		if(args == null || args.length != 1) {
+		if (args == null || args.length != 1) {
 			System.out.println("Cannot proceed, please specify the output directory");
 			System.exit(0);
 		}
@@ -69,9 +74,18 @@ public class SpringDocumentDownload {
 
 			String fileName = properties.getProperty(document + DocumentConstants.FILE);
 			String directory = args[0];
+			if (!directory.endsWith("/")) {
+				directory = directory + "/";
+			}
+
 			File file = new File(directory + fileName);
 			if (!file.exists()) {
-				HttpGet httpGet = new HttpGet(url + fileName);
+				HttpGet httpGet = null;
+				if (url.contains("htmlsingle")) {
+					httpGet = new HttpGet(url);
+				} else {
+					httpGet = new HttpGet(url + fileName);
+				}
 
 				try {
 					createDirectoryIfItDoesNotExist(directory);
