@@ -36,6 +36,7 @@ public class SpringDocumentDownload {
 		documentList.add(DocumentConstants.SPRING_INTEGRATION);
 		documentList.add(DocumentConstants.SPRING_BATCH);
 		documentList.add(DocumentConstants.SPRING_SECURITY);
+		documentList.add(DocumentConstants.SPRING_SECURITY_SAML);
 		documentList.add(DocumentConstants.SPRING_AMQP);
 		documentList.add(DocumentConstants.SPRING_MOBILE);
 		documentList.add(DocumentConstants.SPRING_ANDROID);
@@ -51,10 +52,16 @@ public class SpringDocumentDownload {
 		documentList.add(DocumentConstants.SPRING_DATA_GEMFIRE);
 		documentList.add(DocumentConstants.SPRING_DATA_REDIS);
 		documentList.add(DocumentConstants.SPRING_DATA_JDBC_EXT);
+		documentList.add(DocumentConstants.SPRING_DATA_JPA);
 		documentList.add(DocumentConstants.SPRING_ROO);
 		documentList.add(DocumentConstants.SPRING_SHELL);
 		documentList.add(DocumentConstants.SPRING_SECURITY_KERBEROS);
 		documentList.add(DocumentConstants.SPRING_CLOUD_CONFIG);
+		documentList.add(DocumentConstants.SPRING_CLOUD_BUS);
+		documentList.add(DocumentConstants.SPRING_CLOUD_AWS);
+		documentList.add(DocumentConstants.SPRING_CLOUD_NETFLIX);
+		documentList.add(DocumentConstants.SPRING_WEBSERVICE);
+		documentList.add(DocumentConstants.SPRING_SESSION);
 	}
 
 	public static void main(String[] args) {

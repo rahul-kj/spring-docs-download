@@ -27,9 +27,16 @@ public interface DocumentConstants {
 	String SPRING_DATA_REDIS = "spring.data.redis";
 	String SPRING_DATA_JDBC_EXT = "spring.data.jdbc";
 	String SPRING_DATA_HADOOP = "spring.data.hadoop";
+	String SPRING_DATA_JPA = "spring.data.jpa";
 	String SPRING_BOOT = "spring.boot";
 	String SPRING_SHELL = "spring.shell";
 	String SPRING_ROO = "spring.roo";
 	String SPRING_SECURITY_KERBEROS = "spring.security.kerberos";
 	String SPRING_CLOUD_CONFIG = "spring.cloud.config";
+	String SPRING_CLOUD_BUS = "spring.cloud.bus";
+	String SPRING_CLOUD_AWS = "spring.cloud.aws";
+	String SPRING_CLOUD_NETFLIX = "spring.cloud.netflix";
+	String SPRING_SESSION = "spring.session";
+	String SPRING_WEBSERVICE = "spring.webservice";
+	String SPRING_SECURITY_SAML = "spring.security.saml";
 }
