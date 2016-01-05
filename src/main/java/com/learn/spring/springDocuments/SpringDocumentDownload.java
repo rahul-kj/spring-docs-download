@@ -34,12 +34,19 @@ public class SpringDocumentDownload {
 		documentList.add(DocumentConstants.SPRING_ANDROID);
 		documentList.add(DocumentConstants.SPRING_BATCH);
 		documentList.add(DocumentConstants.SPRING_BOOT);
+		documentList.add(DocumentConstants.SPRING_CLOUD);
+		documentList.add(DocumentConstants.SPRING_CLOUD_CLOUDFOUNDRY);
 		documentList.add(DocumentConstants.SPRING_CLOUD_CONFIG);
+		documentList.add(DocumentConstants.SPRING_CLOUD_CONNECTORS);
+		documentList.add(DocumentConstants.SPRING_CLOUD_CONSUL);
+		documentList.add(DocumentConstants.SPRING_CLOUD_DATAFLOW);
 		documentList.add(DocumentConstants.SPRING_CLOUD_BUS);
 		documentList.add(DocumentConstants.SPRING_CLOUD_AWS);
 		documentList.add(DocumentConstants.SPRING_CLOUD_NETFLIX);
 		documentList.add(DocumentConstants.SPRING_CLOUD_SECURITY);
+		documentList.add(DocumentConstants.SPRING_CLOUD_SLEUTH);
 		documentList.add(DocumentConstants.SPRING_CLOUD_STREAM);
+		documentList.add(DocumentConstants.SPRING_CLOUD_STREAM_MODULES);
 		documentList.add(DocumentConstants.SPRING_CLOUD_ZOOKEEPER);
 		documentList.add(DocumentConstants.SPRING_DATA);
 		documentList.add(DocumentConstants.SPRING_DATA_MONGO);
@@ -89,7 +96,14 @@ public class SpringDocumentDownload {
 				directory = directory + "/";
 			}
 
-			File file = new File(directory + fileName);
+			File file = null;
+			if(fileName.equalsIgnoreCase("index.html")) {
+				String newFileName = document.replace(".", "-").concat("-reference.html");
+				file = new File(directory + newFileName);
+			} else {
+				file = new File(directory + fileName);
+			}
+			
 			if (!file.exists()) {
 				HttpGet httpGet = null;
 				if (url.contains("htmlsingle")) {
